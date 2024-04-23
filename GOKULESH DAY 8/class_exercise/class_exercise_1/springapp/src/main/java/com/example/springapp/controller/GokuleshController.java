@@ -18,9 +18,9 @@ public class GokuleshController {
     private GokouleshService ser;
 
     @PostMapping("/person")
-    public ResponseEntity<Person> post(@RequestBody Gokulesh person) {
-        if (ser.post(person)) {
-            return new ResponseEntity<>(person, HttpStatus.CREATED);
+    public ResponseEntity<Gokulesh> post(@RequestBody Gokulesh Gokulesh) {
+        if (ser.post(Gokulesh)) {
+            return new ResponseEntity<>(Gokulesh, HttpStatus.CREATED);
         } else {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
